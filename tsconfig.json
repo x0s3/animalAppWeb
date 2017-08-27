@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "rootDir": "./server/Server TS",
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "outDir": "./server/Server JS",
+        "noEmitOnError": true,
+        "declaration": false
+    },
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

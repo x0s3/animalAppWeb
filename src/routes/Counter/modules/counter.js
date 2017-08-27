@@ -41,14 +41,14 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]    : (state, action) => state + action.payload,
-  [COUNTER_DOUBLE_ASYNC] : (state, action) => state * 2
+  [COUNTER_INCREMENT]    : (state, action) => {return Object.assign({},state,state.counter=state.counter + action.payload)},
+  [COUNTER_DOUBLE_ASYNC] : (state, action) => {return Object.assign({},state,state.counter=state.counter * 2)},
 }
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = 0
+const initialState = {counter:0}
 export default function counterReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 
